@@ -115,7 +115,7 @@ public class P6Deneme extends JFrame{
 	  }
 	  catch(FileNotFoundException e1){}
 	  catch(IOException e2){}
-	  
+	  //denemeee
 	}   
 	class DrawingPanel extends JPanel{
 		public void paintComponent(Graphics g){
