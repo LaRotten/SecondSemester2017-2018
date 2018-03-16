@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,10 +15,11 @@ public class P5Deneme1 extends JFrame{
 	private int [] pixs;
 	private DrawingPanel dp;
 		P5Deneme1() throws IOException {
-			setSize(500,500);
+			setSize(512,512);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			
 			try {
+				
 				FileInputStream fis=new FileInputStream("baboon.pgm");
 				byte [] magicNum=new byte [2];		
 				fis.read(magicNum);
@@ -95,7 +97,7 @@ public class P5Deneme1 extends JFrame{
 				for(int i=1;i<height*width;i++) {
 					pixs[i]=fis.read();
 				}
-				
+				System.out.println(pixs[0]+" "+pixs[1]);
 			}
 			catch(FileNotFoundException e){}
 			

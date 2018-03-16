@@ -57,11 +57,9 @@ public class P3FilesDeneme extends JFrame{
 			for(int row =0;row<height;row++) {
 				for(int col=0;col<width;col++) {
 					try {
-					
 						g.setColor(new Color(pixels[counter],pixels[counter+1],pixels[counter+2]));
 						g.fillRect(col, row, 1, 1);
 						counter=counter+3;
-						
 					}
 					catch(IllegalArgumentException e) {}
 				}
